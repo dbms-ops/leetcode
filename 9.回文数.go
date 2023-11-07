@@ -11,13 +11,10 @@ func isPalindrome(x int) bool {
 	if x == 0 {
 		return true
 	}
-	if x < 0 {
+	if x < 0 || x%10 == 0 {
 		return false
 	}
 
-	if x%10 == 0 {
-		return false
-	}
 	var temp []int
 	for x > 0 {
 		t := x % 10
