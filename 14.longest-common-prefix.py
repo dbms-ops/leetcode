@@ -30,7 +30,7 @@ class Solution:
             sub_str = start[:i]
             for item in strs:
                 if not item.startswith(sub_str):
-                    return sub_str[: i - 1]
+                    return sub_str[:i-1]
         return start
 
 # @lc code=end

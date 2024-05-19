@@ -22,11 +22,10 @@ class ListNode:
 
 
 class Solution:
-
     def mergeTwoLists(self, list1: ListNode, list2: ListNode) -> ListNode:
         preprev = ListNode(val=-1)
         prev = preprev
-        while (list1.next and list2.next):
+        while list1.next and list2.next:
             if list1.val > list2.val:
                 prev.next = list2
                 list2 = list2.next
