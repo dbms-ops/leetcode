@@ -1,7 +1,5 @@
 # @lcpr-before-debug-begin
-from operator import le
-from python3problem28 import *
-from typing import *
+
 
 # @lcpr-before-debug-end
 
