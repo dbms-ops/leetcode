@@ -18,13 +18,24 @@
 # @lc code=start
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-        for index, value in enumerate(haystack):
-            if haystack[index:index + len(needle)] == needle:
-                return index
+        index_needle = 0
+        index_needle_max = len(needle)
+        index_haystack = 0
+        while index_haystack < len(haystack):
+            if needle[index_needle] == haystack[index_haystack]:
+                if index_needle == index_needle_max - 1:
+                    return index_haystack - index_needle
+                index_needle += 1
+                index_haystack += 1
+
+            else:
+                index_haystack = index_haystack - index_needle + 1
+                index_needle = 0
+
         return -1
 
-# @lc code=end
 
+# @lc code=end
 
 #
 # @lcpr case=start

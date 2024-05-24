@@ -21,6 +21,7 @@ class Solution:
             return left
         if target > nums[right]:
             return right + 1
+
         while right - left != 1:
             middle = (left + right) // 2
             if target > nums[middle]:
